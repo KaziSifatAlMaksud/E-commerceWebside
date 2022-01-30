@@ -8,7 +8,6 @@ const Footer = () => {
           <Col className="text-center py-5">Copyright &copy; ProShop</Col>
         </Row>
       </Container>
-      <h1>i am a footer</h1>
     </footer>
   );
 };
