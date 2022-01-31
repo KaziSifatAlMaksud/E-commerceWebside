@@ -1,30 +1,31 @@
-import React from 'react';
-import { Card } from 'react-bootstrap';
-const Product = ({product}) => {
+import React from "react";
+import { Card } from "react-bootstrap";
+import Rating from "./Rating";
+
+const Product = ({ pro }) => {
   return (
-          <Card className ="my-3 p-3 rounded">
-            <a href={`/product/${product._id}`}>
-                <Card.Img src = {product.image} variant ='top'/>
-            </a>
-            <Card.Body>
-            <a href={`/product/${product._id}`}>
-                <Card.Title as='div' >
-                    <strong>{product.name}</strong>
-                    </Card.Title> 
-            </a>
-            <Card.Text as='div'>
-                <div className='my-3'>
-                    {product.rating} from {product.numReviews} reviews
-                </div>
-            </Card.Text>
-            <Card.Text as='div'>
-                <div className='my-3'>
-                  <h3> ${product.price}</h3>
-                </div>
-            </Card.Text>
-            </Card.Body>
+    <Card className="my-3 p-3 rounded">
+      <a href={`/product/${pro._id}`}>
+        <Card.Img src={pro.image} variant="top" />
+      </a>
+      <Card.Body>
+        <a href={`/product/${pro._id}`}>
+          <Card.Title as="div">
+            <strong>{pro.name}</strong>
+          </Card.Title>
+        </a>
+        <Card.Text as="div">
+          <div className="my-3">
+            <Rating value={pro.rating} text={pro.numReviews} />
+          </div>
+        </Card.Text>
+        <Card.Text as="div">
+          <div className="my-3">
+            <h3> ${pro.price}</h3>
+          </div>
+        </Card.Text>
+      </Card.Body>
     </Card>
-    
   );
 };
 
