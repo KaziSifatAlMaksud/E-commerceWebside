@@ -6,19 +6,17 @@ import Header from "./component/Header";
 import Footer from "./component/Footer";
 import ProductSceen from "./screens/ProductSceen";
 import HomeScreen from "./screens/HomeScreen";
-import products from "./products";
-
 function App() {
   return (
     <Router>
       <Header />
       <main className="my-3">
-      <Container>
-        <Routes>
-          <Route exact path="/" element={<HomeScreen />} />
-          <Route path="/product/:id" element={<ProductSceen />}  />
-        </Routes>
-      </Container>
+        <Container>
+          <Routes>
+            <Route exact path="/" element={<HomeScreen />} />
+            <Route path="/product/:id" element={<ProductSceen />} />
+          </Routes>
+        </Container>
       </main>
       <Footer />
     </Router>
